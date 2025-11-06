@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koneksi Database | MBOZOKAMANE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #dbeafe 0%, #ffffff 100%);
+    }
+
+    .status-box {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    .success {
+      color: green;
+      font-weight: 600;
+    }
+
+    .error {
+      color: red;
+      font-weight: 600;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="status-box">
+    <h2>Status Koneksi Database</h2>
+    <p id="status" class="success">Terhubung ke database (simulasi)</p>
+    <button onclick="window.location.href='index.html'">Kembali ke Beranda</button>
+  </div>
+
+  <script>
+    // Simulasi koneksi database
+    console.log("Menyambung ke database...");
+
+    // Kalau mau buat efek "gagal" juga bisa:
+    // document.getElementById('status').textContent = "Koneksi gagal: Database tidak ditemukan.";
+    // document.getElementById('status').className = "error";
+  </script>
+</body>
+</html>
