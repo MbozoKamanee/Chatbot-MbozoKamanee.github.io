@@ -61,16 +61,40 @@
     ::placeholder {
       color: #9ca3af;
     }
+
+    .note {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
   <div class="login-container">
     <h2>Login ke Sistem</h2>
-    <form action="proses_login.php" method="POST">
-      <input type="text" name="username" placeholder="Username" required><br>
-      <input type="password" name="password" placeholder="Password" required><br>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
       <button type="submit">Masuk</button>
     </form>
+    <p class="note">Gunakan akun demo apa saja untuk masuk</p>
   </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      // Simulasi login tanpa backend
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username && password) {
+        // Simpan nama pengguna ke localStorage (simulasi session)
+        localStorage.setItem("username", username);
+        window.location.href = "index.html"; // redirect ke halaman utama
+      } else {
+        alert("Harap isi username dan password.");
+      }
+    });
+  </script>
 </body>
 </html>
